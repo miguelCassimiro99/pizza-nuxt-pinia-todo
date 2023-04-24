@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { IToDoItem } from '~~/types/to-do';
+import { useToDoStore } from '@/stores/todo'
 
-
-const todoItems = [
+const todoItemsList = [
   {
     id: 'fwwewere',
     description: 'Estudar Node',
@@ -15,7 +15,7 @@ const todoItems = [
   {
     id: 'ewriwor',
     description: 'Estudar Node',
-    finished: true,
+    finished: false,
     project: {
       id: '2reer',
       name: 'UmDois Esportes'
@@ -24,9 +24,11 @@ const todoItems = [
 
 ] as IToDoItem[]
 
+const store = useToDoStore();
+
 </script>
 <template>
-<section class="relative h-full overflow-y-auto">
+<section class="relative h-full overflow-y-auto overflow-x-hidden">
   <h2 class="text-2xl mb-10 font-bold md:hidden">ToDo List</h2>
   <div class="flex w-full justify-center">
     <LayoutNavbarComponent />
@@ -39,9 +41,14 @@ const todoItems = [
   </button>
 
   <div class="flex flex-col px-4 items-center justify-start gap-4">
-
-    <ToDoItemCard :finished="true" />
-    <ToDoItemCard :finished="false" />
+    <ToDoItemCard
+      v-for="(todo, index) in store.todo.todos"
+      :key="index"
+      :id="todo.id"
+      :description="todo.description"
+      :finished="todo.finished"
+      :project-name="todo.project?.name"
+    />
   </div>
 
 </section>

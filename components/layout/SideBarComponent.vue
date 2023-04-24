@@ -3,7 +3,7 @@
 </script>
 <template>
   <aside class="h-[10vh] md:h-full w-full md:w-[20vw] lg:w-[25vw] flex md:flex-col justify-start items-center bg-dark-theme-secondary space-y-0 md:space-y-10 md:py-20 shadow-2xl px-4 border border-dark-theme-secondary">
-    <LayoutBrandComponent />
+    <LayoutLogoComponent />
 
     <div class="flex md:flex-col justify-center md:justify-start gap-4 flex-1">
       <NuxtLink
@@ -14,7 +14,7 @@
           name="solar:checklist-minimalistic-broken"
           class="xs:w-5 xs:h-5 sm:w-7 sm:h-7 text-gray-100"
         />
-        <span class="text-xs sm:text-sm text-gray-100 font-semibold">ToDo List</span>
+        <span class="text-xs sm:text-sm text-gray-100 font-semibold">ToDos</span>
       </NuxtLink>
 
       <NuxtLink

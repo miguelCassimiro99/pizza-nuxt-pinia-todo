@@ -6,7 +6,7 @@ export interface IProject {
 export interface IToDoItem {
   id: string
   description: string
-  project: IProject
+  project?: IProject
   finished: boolean
 }
 

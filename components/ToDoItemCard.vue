@@ -1,16 +1,26 @@
 <script setup lang="ts">
+import { useToDoStore } from '@/stores/todo'
 const props = defineProps({
-  finished: { type: Boolean, required: true }
+  id: { type: String, required: true },
+  finished: { type: Boolean, required: true },
+  description: { type: String, required: true },
+  projectName: { type: String, required: false },
 })
 
-//const baseStyle = 'card rounded-lg w-full bg-dark-theme-secondary px-3 py-2 shadow-sm flex justify-start items-center gap-4'
+const store = useToDoStore()
+const { toggleToDoItemFinished } = store
 </script>
 <template>
 <div :class="`${finished ? 'bg-dark-theme-secondary/40' : 'bg-dark-theme-secondary' } card rounded-lg w-full px-3 py-2 shadow-sm flex justify-start items-center gap-4 transition-all`">
-  <input type="checkbox" class="w-7 h-7 accent-primary rounded-lg" :checked="finished" />
+  <input
+    type="checkbox"
+    class="w-7 h-7 accent-primary rounded-lg"
+    :checked="finished"
+    @change="toggleToDoItemFinished(id)"
+  />
   <div>
-    <h2 :class="`${finished ? 'text-gray-700' : 'text-gray-100'} text-base font-semibold transition-all`">Estudar Node</h2>
-    <span :class="`${finished ? 'text-primary/20' : 'text-primary' } text-xs transition-all`">UmDois Esportes</span>
+    <h2 :class="`${finished ? 'text-gray-700' : 'text-gray-100'} text-base font-semibold transition-all`">{{ props.description }}</h2>
+    <span :class="`${finished ? 'text-primary/20' : 'text-primary' } text-xs transition-all`">{{ props.projectName || 'No project' }}</span>
   </div>
 </div>
 </template>

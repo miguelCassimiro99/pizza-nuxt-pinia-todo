@@ -7,6 +7,7 @@ export interface IToDoItem {
   id: string
   description: string
   project: IProject
+  finished: boolean
 }
 
 export interface IToDoList {

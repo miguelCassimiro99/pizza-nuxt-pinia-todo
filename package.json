@@ -6,17 +6,16 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.4.2",
     "@types/uuid": "^9.0.1",
-    "@vitejs/plugin-vue": "^4.2.0",
-    "@vue/test-utils": "^2.3.2",
     "autoprefixer": "^10.4.14",
-    "jsdom": "^21.1.1",
     "nuxt": "^3.3.2",
     "nuxt-icon": "^0.3.3",
+    "nuxt-vitest": "^0.6.10",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.1",
     "vitest": "^0.30.1"

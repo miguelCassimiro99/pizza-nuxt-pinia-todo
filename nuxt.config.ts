@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
-    'nuxt-icon'
+    'nuxt-icon',
+    'nuxt-vitest'
   ],
   css: ['~/assets/styles/main.css'],
   postcss: {

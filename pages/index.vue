@@ -1,30 +1,7 @@
 <script setup lang="ts">
-import { IToDoItem } from '~~/types/to-do';
-import { useToDoStore } from '@/stores/todo'
+import TodoListView from '~~/components/TodoListView.vue';
 
-const todoItemsList = [
-  {
-    id: 'fwwewere',
-    description: 'Estudar Node',
-    finished: true,
-    project: {
-      id: '2reer',
-      name: 'UmDois Esportes'
-    }
-  },
-  {
-    id: 'ewriwor',
-    description: 'Estudar Node',
-    finished: false,
-    project: {
-      id: '2reer',
-      name: 'UmDois Esportes'
-    }
-  }
 
-] as IToDoItem[]
-
-const store = useToDoStore();
 
 </script>
 <template>
@@ -40,16 +17,8 @@ const store = useToDoStore();
     <Icon name="material-symbols:add-rounded" class="text-white w-10 h-10" />
   </button>
 
-  <div class="flex flex-col px-4 items-center justify-start gap-4">
-    <ToDoItemCard
-      v-for="(todo, index) in store.todo.todos"
-      :key="index"
-      :id="todo.id"
-      :description="todo.description"
-      :finished="todo.finished"
-      :project-name="todo.project?.name"
-    />
-  </div>
+  
+  <TodoListView />
 
 </section>
 

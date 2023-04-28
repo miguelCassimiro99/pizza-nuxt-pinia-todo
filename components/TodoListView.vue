@@ -3,6 +3,10 @@ import { useToDoStore } from '@/stores/todo';
 
 const store = useToDoStore();
 
+onMounted(async () => {
+  store.getTodoList();
+})
+
 let progress = computed(() => {
   const done = store.todo.todos.filter(item => item.finished).length
   return ((done / store.todo.todos.length) * 100).toFixed(2)

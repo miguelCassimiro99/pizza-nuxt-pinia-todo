@@ -19,4 +19,10 @@ export default defineNuxtConfig({
       ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
     ],
   },
+
+  runtimeConfig: {
+    public: {
+      apiBase: process.env.API_BASE_URL
+    }
+  }
 })

@@ -40,3 +40,12 @@ npm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+
+### JSON Server
+Make sure to install the json-server package
+
+```shell
+npm install -g json-server
+```

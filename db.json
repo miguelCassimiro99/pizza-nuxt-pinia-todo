@@ -1,19 +1,8 @@
 {
   "todos": [
     {
-      "id": "fwwewere",
-      "description": "Estudar Node",
-      "finished": false,
-      "project": null
-    },
-    {
-      "description": "Novo",
-      "id": "19298574-4407-408a-81ef-b92f7bf30698",
-      "finished": false
-    },
-    {
       "description": "teste",
-      "id": "989439e8-4d43-4c37-b880-b78eb6fb5821",
+      "id": "1f5e19d9-258e-4e2a-a482-b3363a87fa31",
       "finished": false
     }
   ]

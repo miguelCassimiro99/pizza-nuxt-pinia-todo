@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 </script>
 <template>
   <aside class="h-[10vh] md:h-full w-full md:w-[20vw] lg:w-[25vw] flex md:flex-col justify-start items-center bg-dark-theme-secondary space-y-0 md:space-y-10 md:py-20 shadow-2xl px-4 border border-dark-theme-secondary">

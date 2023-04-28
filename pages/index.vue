@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import TodoListView from '~~/components/TodoListView.vue';
-
-
-
 </script>
 <template>
 <section class="relative h-full overflow-y-auto overflow-x-hidden">
@@ -10,16 +7,19 @@ import TodoListView from '~~/components/TodoListView.vue';
   <div class="flex w-full justify-center">
     <LayoutNavbarComponent />
   </div>
-  
-  <button
-    class="absolute right-0 bottom-0 rounded-full shadow-lg shadow-dark-theme-secondary w-16 h-16 md:hidden bg-gradient-to-r from-purple-700 to-pink-600 flex justify-center items-center"
-  >
-    <Icon name="material-symbols:add-rounded" class="text-white w-10 h-10" />
-  </button>
 
   
+  <!-- <button
+    class="absolute right-0 bottom-0 rounded-full shadow-lg shadow-dark-theme-secondary w-16 h-16 md:hidden bg-gradient-to-r from-purple-700 to-pink-600 flex justify-center items-center"
+    >
+    <Icon name="material-symbols:add-rounded" class="text-white w-10 h-10" />
+  </button> -->
+
+
+
   <TodoListView />
 
+  <UiModalComponent />
 </section>
 
 

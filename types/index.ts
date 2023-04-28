@@ -15,5 +15,5 @@ export interface IToDoList {
 }
 
 export interface IProjects {
-  projects: IProjects[]
+  projects: IProject[]
 }

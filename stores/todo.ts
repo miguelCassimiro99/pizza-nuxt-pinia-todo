@@ -1,19 +1,15 @@
-import { IProject, IProjects, IToDoItem, IToDoList } from "~~/types/to-do"
+import { IProject, IProjects, IToDoItem, IToDoList } from "~~/types/"
 import { v4 as uuidv4 } from 'uuid';
 import clientHttp from "~~/services/http";
 
 interface IState {
   todo: IToDoList
-  project: IProjects 
 }
 
 export const useToDoStore = defineStore('todo', {
   state: () => ({
     todo: {
       todos: [],
-    },
-    project: {
-      projects: []
     }
   } as IState),
   getters: {

@@ -1,9 +1,10 @@
 {
   "todos": [
     {
-      "description": "novo teste",
+      "description": "novo todo",
       "id": "88f20ebd-7825-48bb-be8a-fe5767e74e01",
-      "finished": false
+      "finished": false,
+      "project": null
     },
     {
       "description": "tes",

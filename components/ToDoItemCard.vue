@@ -27,7 +27,7 @@ const startEditToDo = (todo: IToDoItem) => {
 <div
   :class="`${props.todoItem.finished ? 
     'bg-dark-theme-secondary/40' : 'bg-dark-theme-secondary' } 
-    card rounded-lg w-full px-3 py-2 shadow-sm flex justify-between items-center gap-4 transition-all`"
+    card rounded-lg w-full px-3 py-2 shadow-sm flex justify-between items-center gap-4 transition-all max-w-xl`"
   >
   <div class="flex justify-center items-center gap-3">
     <input

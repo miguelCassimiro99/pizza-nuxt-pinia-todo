@@ -2,7 +2,6 @@
 import TodoListView from '~~/components/TodoListView.vue';
 import { useToDoStore } from '~~/stores/todo';
 import { useUiStore } from '~~/stores/ui';
-import { IToDoItem } from '~~/types';
 
 const uiStore = useUiStore()
 

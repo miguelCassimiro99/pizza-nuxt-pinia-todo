@@ -1,51 +1,76 @@
-# Nuxt 3 Minimal Starter
+# Pizza Nuxt Pinia Pattern
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+💻 version: 1.0.0
 
-## Setup
+The proposal of this project it’s to test how mature is Nuxt 3 to build simple apps with some other libs and features that comes with Vue 3 and the Nuxt itself.
 
-Make sure to install the dependencies:
+How does it works 🔍
 
-```bash
-# yarn
-yarn install
+- The index page contains a little form to add a description to a new ToDo Item and it have a list with ToDo that are fetched on backend.
+- You can simple add a new ToDo, delete, update and mark as finished. Beside that, you can add a project to a ToDo Item if you want to organize your list by projects or different contexts.
 
-# npm
-npm install
+### Tools 🛠️
 
-# pnpm
-pnpm install
+🌐 [Nuxt](https://v3.nuxtjs.org/)
+
+🌐 [Tailwind](https://tailwindcss.com/)
+
+🌐 [Typescript](https://www.typescriptlang.org/)
+
+🌐 [Pinia](https://pinia.vuejs.org/)
+
+🌐 [Json Server](https://github.com/typicode/json-server)
+
+🌐 [Vite](https://vitejs.dev/)
+
+🌐 [Vitest](https://vitest.dev/)
+
+---
+
+## Features 📜
+
+- [x]  ToDo List
+- [x]  ToDo - CRUD
+- [x]  State Management with Pinia
+- [x]  Transitions
+- [x]  Tests
+- [x]  Reusable Components
+- [x]  Backend Integration
+
+---
+
+## Setup 🏗️
+
+## Installation
+
+```
+$ yarn
 ```
 
-## Development Server
+<aside>
+💡 If you haven’t installed the json-server you need to install it using ‘npm install -g json-server’
 
-Start the development server on http://localhost:3000
+</aside>
 
-```bash
-npm run dev
-```
+## Running the app
 
-## Production
+At this stage you need to set the .env variables (In this case it’s only the API route).
 
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
+After that:
 
 ```bash
-npm run preview
+
+# run the frontend environment
+yarn dev
+
+# start the backend
+yarn backend
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Test
 
+```
+# unit tests
+$ yarn test
 
-
-### JSON Server
-Make sure to install the json-server package
-
-```shell
-npm install -g json-server
 ```

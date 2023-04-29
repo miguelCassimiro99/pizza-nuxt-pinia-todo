@@ -4,12 +4,18 @@ import clientHttp from "~~/services/http";
 
 interface IState {
   todo: IToDoList
+  selectedTodo: IToDoItem
 }
 
 export const useToDoStore = defineStore('todo', {
   state: () => ({
     todo: {
       todos: [],
+    },
+    selectedTodo: {
+      id: "",
+      description: "",
+      finished: false
     }
   } as IState),
   getters: {
@@ -89,6 +95,7 @@ export const useToDoStore = defineStore('todo', {
 
     async editTodoItem(item: IToDoItem) {
       try {
+        console.log("OPA");
         if(!item.description || item.description === " ") return;
         if(item.description === "") return;
         item.description = item.description.trim();
@@ -104,6 +111,10 @@ export const useToDoStore = defineStore('todo', {
         console.log("Error")
         console.log("Can't edit Todo Item")
       }
-    }
+    },
+
+    setOnChangeTodo(selectedTodo: IToDoItem) {
+      this.selectedTodo = selectedTodo;
+    },
   }
 })

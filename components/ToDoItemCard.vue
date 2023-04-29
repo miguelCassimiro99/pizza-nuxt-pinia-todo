@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useToDoStore } from '@/stores/todo'
-import { IToDoItem } from '~~/types/to-do';
-
+import { useUiStore } from '@/stores/ui'
+import { IToDoItem } from '~~/types';
 interface IToDoItemCard extends IToDoItem {}
 
 // const props = defineProps({
@@ -11,16 +11,23 @@ interface IToDoItemCard extends IToDoItem {}
 //   projectName: { type: String, required: false },
 // })
 
+const uiStore = useUiStore()
 const props = defineProps<{todoItem: IToDoItem}>()
 
 const store = useToDoStore()
-const { toggleToDoItemFinished, deleteTodoItem } = store
+const { toggleToDoItemFinished, deleteTodoItem, setOnChangeTodo } = store
+
+const startEditToDo = (todo: IToDoItem) => {
+  setOnChangeTodo(todo);
+  uiStore.openModal()
+}
+
 </script>
 <template>
 <div
   :class="`${props.todoItem.finished ? 
     'bg-dark-theme-secondary/40' : 'bg-dark-theme-secondary' } 
-    card rounded-lg w-full px-3 py-2 shadow-sm flex justify-between items-center gap-4 transition-all`"
+    card rounded-lg w-full px-3 py-2 shadow-sm flex justify-between items-center gap-4 transition-all max-w-xl`"
   >
   <div class="flex justify-center items-center gap-3">
     <input
@@ -36,7 +43,9 @@ const { toggleToDoItemFinished, deleteTodoItem } = store
 
   </div>
   <div class="flex justify-center gap-4">
-    <button class="w-6 h-6 md:w-8 md:h-8 shadow-md shadow-dark-theme rounded-full bg-primary text-white flex justify-center items-center">
+    <button
+      @click="startEditToDo(props.todoItem)"
+      class="w-6 h-6 md:w-8 md:h-8 shadow-md shadow-dark-theme rounded-full bg-primary text-white flex justify-center items-center">
       <Icon name="ic:baseline-mode-edit" />
     </button>
     <button

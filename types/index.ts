@@ -17,3 +17,14 @@ export interface IToDoList {
 export interface IProjects {
   projects: IProject[]
 }
+
+
+export interface IMenuItem {
+  label: string
+  url: string
+  icon: string
+}
+
+export interface IMenuItems {
+  menuItems: IMenuItem[]
+}

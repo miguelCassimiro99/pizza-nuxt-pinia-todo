@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     'nuxt-icon',
-    'nuxt-vitest'
+    'nuxt-vitest',
+    'nuxt-headlessui'
   ],
   css: ['~/assets/styles/main.css'],
   postcss: {
@@ -24,5 +25,9 @@ export default defineNuxtConfig({
     public: {
       apiBase: process.env.API_BASE_URL
     }
+  },
+
+  headlessui: {
+    prefix: 'Headless'
   }
 })

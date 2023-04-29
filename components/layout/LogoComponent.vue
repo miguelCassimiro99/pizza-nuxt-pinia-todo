@@ -1,5 +1,5 @@
 <template>
-<brand class="hidden md:flex md:flex-col lg:flex-row justify-center items-center gap-4 flex-1">
+<brand class="hidden md:flex md:flex-col 2xl:flex-row justify-center items-center gap-4 flex-1">
   <div class="flex justify-center items-center bg-gradient-to-r from-purple-700 to-pink-600 w-fit h-auto shadow-2xl rounded-2xl">
     <Icon
       name="material-symbols:check-small-rounded"

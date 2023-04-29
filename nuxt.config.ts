@@ -29,5 +29,8 @@ export default defineNuxtConfig({
 
   headlessui: {
     prefix: 'Headless'
+  },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in'}
   }
 })

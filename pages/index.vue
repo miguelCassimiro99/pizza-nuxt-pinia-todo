@@ -25,7 +25,7 @@ async function cancelUpdate() {
 
 </script>
 <template>
-<section class="relative h-full overflow-y-auto overflow-x-hidden">
+<section class="relative h-full overflow-x-hidden">
   <h2 class="text-2xl mb-10 font-bold md:hidden">ToDo List</h2>
   <div class="flex w-full justify-center">
     <LayoutNavbarComponent />

@@ -19,10 +19,13 @@ let progress = computed(() => {
   <div v-if="store.todo.todos.length">
     <span class="text-sm font-semibold">Concluded {{ progress || 0 }} %</span>
   </div>
-  <ToDoItemCard
-    v-for="(todo, index) in store.todo.todos"
-    :todo-item="todo"
-  />
+  <div class="flex flex-col gap-4 overflow-y-auto">
+    <ToDoItemCard
+      v-for="(todo, index) in store.todo.todos"
+      :todo-item="todo"
+    />
+
+  </div>
 </div>
 
 </template>

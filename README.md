@@ -8,6 +8,10 @@ How does it works 🔍
 
 - The index page contains a little form to add a description to a new ToDo Item and it have a list with ToDo that are fetched on backend.
 - You can simple add a new ToDo, delete, update and mark as finished. Beside that, you can add a project to a ToDo Item if you want to organize your list by projects or different contexts.
+- Some rules: 
+  - You can't add a ToDo Item if you've already 4 unfinished
+  - You can't add blank description
+
 
 ### Tools 🛠️
 
